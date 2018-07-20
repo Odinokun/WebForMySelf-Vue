@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <h2>Счетчик = {{ counter }}</h2>
+  <br><br>
+  <button v-on:click="riseCounter">Увеличить</button>
+
+  <br><br>
+  <hr>
+  <br><br>
+
+  <h2 v-on:mouseover="onHover">Счетчик 2 = {{ counter2 }}</h2>
+
+  <br><br>
+
+  <button v-on:click="counter2++">Увеличить</button>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>

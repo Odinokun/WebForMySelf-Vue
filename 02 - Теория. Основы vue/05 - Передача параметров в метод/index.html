@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <h2>{{ title }} = {{ counter }}</h2>
+  <br><br>
+  <button v-on:click="riseCounter(10, 'Изменено на 10', $event)">Увеличить на 10</button>
+  <br><br>
+  <button v-on:click="riseCounter(20, 'Изменено на 20', $event)">Увеличить на 20</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>
