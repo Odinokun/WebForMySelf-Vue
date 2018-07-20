@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <ul>
+    <!-- 'person' - это любое слово, как 'i' в JS, 'index' - тоже любое слово для вывода индекса элемента,
+    'in' это ключевое слово после которого идет массив -->
+    <li v-for="(person, index) in people">{{ index + 1 }} {{ person }}</li>
+  </ul>
+
+  <br><br>
+  <hr>
+  <br></br>
+
+  <ul>
+    <li v-for="(person, index) in people2">{{ index + 1 }}. {{ person.name }} - <b>{{ person.age }}</b></li>
+  </ul>
+
+  <br><br>
+  <hr>
+  <br><br>
+
+  <ol>
+    <li v-for="num of 4">{{ num }}</li>
+  </ol>
+
+  <br><br>
+  <hr>
+  <br><br>
+
+  <ul>
+    <li v-for="value in onePerson">{{ value }}</li>
+  </ul>
+
+  <ul>
+    <li v-for="(value, key, index) in onePerson"><em>{{ index + 1 }}</em>. <b>{{ key }}</b> - {{ value }}</li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>

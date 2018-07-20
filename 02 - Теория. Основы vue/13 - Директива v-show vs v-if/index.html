@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <!--Директива v-show позволяет скрывать или показывать элементы НЕ УДАЛЯЯ их из DOM в зависимости от булевого значения-->
+  <h1 v-show="isVisible">I am visible</h1>
+  <h2 v-show="!isVisible">You can`t see me!</h2>
+  <br><br>
+  <hr>
+  <br><br>
+  <button @click="isVisible = !isVisible">Toggle</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>

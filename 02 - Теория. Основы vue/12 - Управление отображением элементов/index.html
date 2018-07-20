@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <!--Директива v-if позволяет удалять и показывать элементы в DOM в зависимости от булевого значения-->
+  <h2 v-if="isVisible">I am visible</h2>
+  <h2 v-else>No I am not!</h2> <!--v-else работает только сразу после v-if-->
+  <h2 v-if="!isVisible">No I am not!</h2>
+  <button @click="isVisible = !isVisible">Toggle</button>
+  <br><br>
+  <hr>
+  <br><br>
+
+  <h2 v-if="type === 'a'">A</h2>
+  <h2 v-else-if="type === 'b'">B</h2>
+  <h2 v-else-if="type === 'c'">C</h2>
+  <h2 v-else>not match</h2>
+  <br><br>
+  <input type="text" v-model="type">
+  <br><br>
+  <hr>
+  <br><br>
+
+  <template v-if="isVisible">
+    <h2 style="color: yellow;">Title #1</h2>
+    <p style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptas.</p>
+  </template>
+
+  <template v-else="">
+    <h2 style="color: blue;">Title #2</h2>
+    <p style="color: yellow;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, expedita.</p>
+  </template>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>
