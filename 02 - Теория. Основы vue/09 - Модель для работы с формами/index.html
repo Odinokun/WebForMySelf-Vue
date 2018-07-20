@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <input type="text" v-model="inputValue">
+  <br><br>
+  <h2>{{ inputValue }}</h2>
+
+  <input type="text" v-model.lazy="inputValue2"> <!-- Вариант с отложеной синхронизацией -->
+  <br><br>
+  <h2>{{ inputValue2 }}</h2>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>
