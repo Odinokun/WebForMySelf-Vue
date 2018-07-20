@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  html,
+  body {
+    height: 100%;
+    background-color: #43b27e;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+</style>
+
+<div id="app">
+  <input type="text" v-on:input="changeName"> <!-- прослушиваем события с помощью директивы в инпуте-->
+  <h1>Hellow {{ name }}</h1>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  new Vue({
+    el: '#app', //инициализируем основную обертку
+    data: { //объект в который мы можем складывать различные данные
+      name: 'Vue!'
+    },
+    methods: { //объект в котором создаем функцию
+      changeName: function(event) {
+        this.name = event.target.value //при выполнении функции будет изменяться this.name
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

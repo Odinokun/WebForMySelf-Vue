@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <h1>String: {{ name }}</h1>
+  <h1>Sum: {{ 10 + 60 }}</h1> <!-- результат арифметического действия -->
+  <h1>Number: {{ number }}</h1>
+  <h1>Method: {{ sayHellow() }}</h1> <!-- результат работы функции -->
+  <h1>If statment: {{ isOk ? 'I am OK' : 'I am not OK!'}}</h1> <!-- Простые тернарные выражения -->
+  <!-- Если значение isOk true то выводим первое значение, если же false, то второе -->
+  <h1>Functions: {{ string.split('').reverse().join('') }}</h1>
+  <!-- Вызываем функцию split, разворачиваем то, что получилось и соединяем строку-->
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+</body>
+</html>
