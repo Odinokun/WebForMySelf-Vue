@@ -13,8 +13,9 @@
 export default {
   data () {
     return {
-      carName: 'Ford from parent',
-      carYear: 2018
+//      carName: 'Ford from parent',
+      carName: 'Mitsubishi',
+      carYear: 2011
     }
   }
 }
