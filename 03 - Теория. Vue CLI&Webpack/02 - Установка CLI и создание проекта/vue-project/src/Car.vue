@@ -19,6 +19,7 @@
 </style>
 
 <script>
+  import {eventEmmiter} from './main'
 
   export default {
     props: {
@@ -27,8 +28,7 @@
         required: true
       },
       carYear: Number,
-      changeFunc: Function,
-      counter: Number
+      changeFunc: Function
     },
     methods: {
       changeName() {
@@ -36,7 +36,8 @@
         this.$emit('nameChanged', this.carName)
       },
       updateCounter() {
-        this.$emit('counterUpdated', this.counter + 1)
+//        this.$emit('counterUpdated', this.counter + 1)
+        eventEmmiter.$emit('counterUpdated')
       }
     },
     computed: {

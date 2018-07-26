@@ -3,7 +3,18 @@
 </template>
 
 <script>
+  import {eventEmmiter} from './main'
+
   export default {
-    props: ['counter']
+    data () {
+      return {
+        counter: 0
+      }
+    },
+    created() {
+      eventEmmiter.$on('counterUpdated', () => {
+        this.counter++
+      })
+    }
   }
 </script>
