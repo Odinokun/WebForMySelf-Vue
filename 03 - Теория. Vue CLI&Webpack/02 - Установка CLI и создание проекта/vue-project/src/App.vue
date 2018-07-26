@@ -5,6 +5,7 @@
     <app-car
       :carName="carName"
       :carYear="carYear"
+      @nameChanged="carName = $event"
     ></app-car>
   </div>
 </template>
@@ -13,9 +14,8 @@
 export default {
   data () {
     return {
-//      carName: 'Ford from parent',
-      carName: 'Mitsubishi',
-      carYear: 2011
+      carName: 'Ford',
+      carYear: 1956
     }
   }
 }
