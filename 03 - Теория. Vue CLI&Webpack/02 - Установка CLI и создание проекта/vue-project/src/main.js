@@ -11,3 +11,5 @@ new Vue({
   //   return h(App)
   // }
 })
+
+export const eventEmmiter  = new Vue()
