@@ -1,9 +1,10 @@
 <template>
   <div class="car">
-    <h3>Name: {{ carName }} / {{ reverseName}}</h3>
+    <h3>Name: {{ carName }} / {{ reverseName }}</h3>
     <p>Year: {{ carYear }}</p>
 
     <button @click="changeName">Change name</button>
+    <button @click="changeFunc()">Change from parent</button>
   </div>
 </template>
 
@@ -21,10 +22,10 @@
     props: {
       carName: {
         type: String,
-        required: true,
-        default: 'Default name'
+        required: true
       },
-      carYear: Number
+      carYear: Number,
+      changeFunc: Function
     },
     methods: {
       changeName() {
