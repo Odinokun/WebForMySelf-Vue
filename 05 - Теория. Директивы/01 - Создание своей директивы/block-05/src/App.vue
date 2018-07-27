@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h2 v-colored>{{ title }}</h2>
+    <h2 v-colored v-if="visible">{{ title }}</h2>
+
+
+    <button @click="visible = !visible">Visible</button>
+    <button @click="title = 'New title'">Title</button>
   </div>
 </template>
 
@@ -8,7 +12,8 @@
 export default {
   data () {
     return {
-      title: 'Welcome to Your Vue.js'
+      title: 'Welcome to Your Vue.js',
+      visible: true
     }
   }
 }
